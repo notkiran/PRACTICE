@@ -1,0 +1,55 @@
+.user-container {
+  background-color: white;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.1s;
+}
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #277af7,
+    #8966e2,
+    #b850c4,
+    #d3399e,
+    #de2b77
+  );
+  min-height: 100vh;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 1.4rem;
+  font-family: "Pacifico", cursive;
+}
+
+.user-container:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.user-container:hover {
+  color: crimson;
+}
+
+.user.form {
+  margin: 2rem;
+}
+
+.edit-user-form {
+  display: none;
+}
