@@ -19,7 +19,7 @@ async function getAllUsers() {
 
   users.forEach((user) => {
     userContainer.innerHTML += `
-        <div class="user-container">
+        <div class="col-md-4 user-container">
         <img class="user-avatar" src="${user.avatar}" alt=${user.name}/>
         <div>
         <p class="user-name">${user.name}</p>
