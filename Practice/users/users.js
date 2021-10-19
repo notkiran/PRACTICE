@@ -1,5 +1,5 @@
 document.body.innerHTML = `
-<div class="col-md-6 col-md-4 user-form">
+<div class="col-md-6 col-md-4 user-form" align="center">
 <i class="fas fa-user"></i> <input type="text" class="add-user-name" placeholder="Add User Name"/>
 <i class="fas fa-link"></i> <input type="text" class="add-user-avatar" placeholder="Add Pic URL" /> 
 <button class="btn btn-success" onClick="addUser()" ><i class="fas fa-user-plus"></i> ADD USER</button>
@@ -19,7 +19,7 @@ async function getAllUsers() {
 
   users.forEach((user) => {
     userContainer.innerHTML += `
-        <div class="col-md-6 col-md-4 user-container">
+        <div class="col-md-6 col-md-4 user-container" align="center">
         <img class="user-avatar" src="${user.avatar}" alt=${user.name}/>
         <div>
         <p class="user-name">${user.name}</p>
