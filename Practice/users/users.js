@@ -25,7 +25,7 @@ async function getAllUsers() {
         <p class="user-name">${user.name}</p>
         <button class="btn btn-primary" onClick="toggleEdit(${user.id})">Edit</button>
         <button class="btn btn-primary" onClick="deleteUser(${user.id})">DELETE</button>
-        <form class="form-floating edit-user-form edit-${user.id}">
+        <div class="edit-user-form edit-${user.id}">
         <div class="form-floating">
         <input type="text" class="edit-${user.id}-user-name form-control" id="edit-${user.id}-user-name" placeholder="Enter Name" value="${user.name}">
         <label for="floatingInputValue">Enter Name</label>
@@ -34,8 +34,8 @@ async function getAllUsers() {
         <input type="text" class="edit-${user.id}-user-avatar form-control" id="edit-${user.id}-user-avatar" placeholder="Enter Pic URL" value="${user.avatar}">
         <label for="floatingInputValue">Enter Pic URL</label>
         </div>
-        <button class="btn btn-success" onClick="editUser(${user.id})">Save</button>
-        </form>
+        <button class="btn btn-success" onClick="editUser(${user.id})"><i class="far fa-save"></i> Save</button>
+        </div>
         </div>
         </div>
         `;
