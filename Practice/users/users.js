@@ -1,8 +1,8 @@
 document.body.innerHTML = `
 <div class="user-form">
-<input class="add-user-name" placeholder="Add user name"/>
-<input class="add-user-avatar" placeholder="Add pic URL" /> 
-<button onClick="addUser()" >ADD USER</button>
+<input type="text" class="add-user-name" placeholder="Add User Name"/>
+<input type="text" class="add-user-avatar" placeholder="Add Pic URL" /> 
+<button class="btn btn-success"onClick="addUser()" >ADD USER</button>
 </div>
 <section class="user-list"></section>`;
 
@@ -23,19 +23,28 @@ async function getAllUsers() {
         <img class="user-avatar" src="${user.avatar}" alt=${user.name}/>
         <div>
         <p class="user-name">${user.name}</p>
-        <button onClick="toggleEdit(${user.id})">Edit</button>
-        <button onClick="deleteUser(${user.id})">DELETE</button>
-        <div class="edit-user-form edit-${user.id}">
-        <input class="edit-${user.id}-user-name" value="${user.name}" placeholder="Enter Name"/>
-        <input class="edit-${user.id}-user-avatar" value="${user.avatar}" placeholder="Enter Pic URL" />
-        <button onClick="editUser(${user.id})">Save</button>
+        <button class="btn btn-primary" onClick="toggleEdit(${user.id})">Edit</button>
+        <button class="btn btn-primary" onClick="deleteUser(${user.id})">DELETE</button>
+        <form class="form-floating edit-user-form edit-${user.id}">
+        <div class="form-floating">
+        <input type="text" class="edit-${user.id}-user-name form-control" id="edit-${user.id}-user-name" placeholder="Enter Name" value="${user.name}">
+        <label for="floatingInputValue">Enter Name</label>
         </div>
+        <div class="form-floating">
+        <input type="text" class="edit-${user.id}-user-avatar form-control" id="edit-${user.id}-user-avatar" placeholder="Enter Pic URL" value="${user.avatar}">
+        <label for="floatingInputValue">Enter Pic URL</label>
+        </div>
+        <button class="btn btn-success" onClick="editUser(${user.id})">Save</button>
+        </form>
         </div>
         </div>
         `;
   });
   console.log(users);
 }
+
+// <input type="text" class="edit-${user.id}-user-name form-control" value="${user.name}" placeholder="Enter Name"/>
+// <input type="text" class="edit-${user.id}-user-avatar form-control" value="${user.avatar}" placeholder="Enter Pic URL" />
 
 getAllUsers();
 
