@@ -2,7 +2,7 @@ document.body.innerHTML = `
 <div class="user-form">
 <input type="text" class="add-user-name" placeholder="Add User Name"/>
 <input type="text" class="add-user-avatar" placeholder="Add Pic URL" /> 
-<button class="btn btn-success"onClick="addUser()" >ADD USER</button>
+<button class="btn btn-success"onClick="addUser()" ><i class="fas fa-user-plus"></i> ADD USER</button>
 </div>
 <section class="user-list"></section>`;
 
@@ -23,8 +23,8 @@ async function getAllUsers() {
         <img class="user-avatar" src="${user.avatar}" alt=${user.name}/>
         <div>
         <p class="user-name">${user.name}</p>
-        <button class="btn btn-primary" onClick="toggleEdit(${user.id})">Edit</button>
-        <button class="btn btn-primary" onClick="deleteUser(${user.id})">DELETE</button>
+        <button class="btn btn-primary" onClick="toggleEdit(${user.id})"><i class="fas fa-user-edit"></i> Edit</button>
+        <button class="btn btn-primary" onClick="deleteUser(${user.id})"><i class="fas fa-user-times"></i> DELETE</button>
         <div class="edit-user-form edit-${user.id}">
         <div class="form-floating">
         <input type="text" class="edit-${user.id}-user-name form-control" id="edit-${user.id}-user-name" placeholder="Enter Name" value="${user.name}">
